@@ -4,8 +4,6 @@
 #include <iomanip>
 #include <ctime>
 
-/***** Complete this program. *****/
-
 using namespace std;
 typedef int Door;
 
@@ -26,15 +24,14 @@ int main()
 	int win1 = 0, win2 = 0;
 	srand(time(NULL));
 
-   cout << setw(4) << "#" << setw(12)<< "Car   " << "First  " << "Opened  " << "Second    " << "Win    " << "Win"<< endl;
-   cout << "         " << setw(4)<< "here  " << "choice    " << "door  " << "choice  " << "first " << "second"<< endl << endl;
+   	cout << setw(4) << "#" << setw(12)<< "Car   " << "First  " << "Opened  " << "Second    " << "Win    " << "Win"<< endl;
+   	cout << "         " << setw(4)<< "here  " << "choice    " << "door  " << "choice  " << "first " << "second"<< endl << endl;
     // Run the simulations.
-   for (int i = 1; i <= SIMULATION_COUNT; i++) simulate(i, win1, win2);
-
-   double x = float(win2)/float(win1);
-   cout << endl << setw(4) << win1 << " wins if stay with the first choice" << endl;
-   cout << setw(4) << win2 << " wins if switch to the second choice"<< endl << endl;
-   cout << "Win ratio of switch over stay: " << setprecision(2) << x << endl;
+   	for (int i = 1; i <= SIMULATION_COUNT; i++) simulate(i, win1, win2);
+    double x = float(win2)/float(win1);
+    cout << endl << setw(4) << win1 << " wins if stay with the first choice" << endl;
+    cout << setw(4) << win2 << " wins if switch to the second choice"<< endl << endl;
+    cout << "Win ratio of switch over stay: " << setprecision(2) << x << endl;
 }
 
 Door hideCar()
@@ -56,8 +53,6 @@ Door openDoor( int c, int f )  // Car and First choice are passed
 	int o = 0; // o = open door
 	if (f == c) // if the first choice is correct
 	{
-//		o = (o != c); // other than f or c
-
 	if (c == 1)
 	{
 	    o = (rand() % 2) + 2; // Generate a random number between 2 and 3
@@ -77,7 +72,6 @@ Door openDoor( int c, int f )  // Car and First choice are passed
 	}
 	else
 	{
-	//o = (o != c) && (o != f);   choice is incorrect (choose the other one)
 	if (c == 1)
 	{
 		if (f == 2)
@@ -135,13 +129,12 @@ void simulate(int i, int &w1, int &w2)
 
 	if (car == first)
 	{
-			w1++; //Counter for win1
+		w1++; //Counter for win1
 		cout << "    yes";
 	}
 	else if (car == second)
 	{
 		w2++; //Counter for win2
-
 		cout << "           yes";
 	}
 	cout << endl;
