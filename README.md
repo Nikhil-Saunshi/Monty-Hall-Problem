@@ -111,3 +111,4 @@ The Monty Hall problem is a brain teaser, in the form of a probability puzzle, l
   64 wins if switch to the second choice
 
 Win ratio of switch over stay: 1.8
+
