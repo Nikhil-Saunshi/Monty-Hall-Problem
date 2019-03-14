@@ -1,3 +1,6 @@
+Sample output
+
+
    #      Car   First  Opened  Second    Win    Win
          here  choice    door  choice  first second
 
@@ -106,3 +109,5 @@
   69 wins if switch to the second choice
 
 Win ratio of switch over stay: 2.2
+
+
